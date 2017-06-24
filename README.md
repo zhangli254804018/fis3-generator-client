@@ -49,7 +49,7 @@ Create a fis3 project
 - 2、后期需要更多的优化兼容开发体验等
 
 
-* [架构源码参考](https://www.npmjs.com/package/fis3-client)
+* [架构源码参考](https://zhangli254804018.github.io/fis3-generator-client/)
 * [核心依賴插件-fis3-parser-client](https://www.npmjs.com/package/fis3-parser-client)
 * [技術支持](http://vc.changyou.com/)
 
