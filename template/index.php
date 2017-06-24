@@ -113,6 +113,6 @@
 <?php if ($debug) {?>
 <script type="text/javascript" src="js/bundle.js?v=<?php echo $v; ?>"></script>
 <?php } else {?>
-<script type="text/javascript" src="js/index.js?v=<?php echo $v; ?>"></script>
+<script type="text/javascript" src="js/main.js?v=<?php echo $v; ?>"></script>
 <?php }?>
 </html>
