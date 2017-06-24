@@ -186,9 +186,10 @@ function createApplication(app_name, path) {
             name: app_name,
             version: '0.3.0',
             private: true,
+            "main": "fis-conf.js",
             "scripts": {
-                "dev": "rm -rf ./dev & fis3 release -d ./build  -cwL",
-                "build": "rm -rf ./dist & fis3 release prod -d ./build -l"
+                "dev": "rm -rf ./dev & fis3 release -d ./dev  -cwL",
+                "build": "rm -rf ./dist & fis3 release prod -d ./dist -l"
             },
             "dependencies": {
                 "fis-parser-less": "^0.1.3",
