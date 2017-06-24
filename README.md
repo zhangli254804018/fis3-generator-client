@@ -10,7 +10,7 @@ Create a fis3 project
         npm install fis3-generator-client -g
         第二步創建文件夾名稱
         fisc demoApp
-        fisc -css stylus myapp
+        如需擴展：fisc -css stylus myapp
         ……
                 .option('-a, --art', 'add art-template engine support (defaults to art)')
                 .option('-e, --ejs', 'add ejs engine support')
