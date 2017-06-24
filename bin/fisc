@@ -187,6 +187,7 @@ function createApplication(app_name, path) {
             version: '0.3.0',
             private: true,
             "main": "fis-conf.js",
+            "description": "Mr. Zhang, Packaged web front-end architecture for PC terminals and so on. full vesion.",
             "scripts": {
                 "dev": "rm -rf ./dev & fis3 release -d ./dev  -cwL",
                 "build": "rm -rf ./dist & fis3 release prod -d ./dist -l"
@@ -202,7 +203,19 @@ function createApplication(app_name, path) {
             },
             "devDependencies": {
                 "fis3": "^3.3.0"
-            }
+            },
+            "repository": {
+                "type": "git",
+                "url": "your git url"
+            },
+            "keywords": [
+                "fis3",
+                "full",
+                "pc",
+                "commonjs"
+            ],
+            "author": "your name",
+            "license": "ISC"
         }
 
         // Template support
