@@ -114,6 +114,7 @@ function createApplication(app_name, path) {
     var iphp = loadTemplate('index.php');
 
     mkdir(path, function() {
+        mkdir(path + '/lib');
         mkdir(path + '/assets');
         mkdir(path + '/assets/images');
         mkdir(path + '/assets/css', function() {

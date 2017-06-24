@@ -8,19 +8,12 @@ Create a fis3 project
         參考文件結構為:
                 -assets
                         -img
-                        -less
                         -css
-                        -pic
-                        -swf
                         ……
                 js
-                        -api
-                        -dist
-                        -dev
                         index.js
                         ……
                 lib
-                        -jquery
                         ……
                 fis-conf.js
                 package.json
