@@ -163,6 +163,7 @@ function createApplication(app_name, path) {
                     copy_template('views/art/index.art', path + '/views/index.art');
                     copy_template('views/art/layout.art', path + '/views/layout.art');
                     copy_template('views/art/error.art', path + '/views/error.art');
+                    break;
                 case 'hjs':
                     copy_template('views/hogan/index.hjs', path + '/views/index.hjs');
                     copy_template('views/hogan/error.hjs', path + '/views/error.hjs');
