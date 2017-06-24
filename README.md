@@ -60,7 +60,9 @@ Create a fis3 project
 - 3、現部署項目的架構已經用於實踐，效果還不錯比之前gulp配置簡單快捷了很多，但是也是有部分問題後期需要解決。
 - 4、更新項目依賴插件最新版本 fis3-parser-client，避免後期經常變化等需求。
   -- 最新更新為新增兼容ie打包js文件
-
+- 5、以下網站頁面已使用該架構
+  [RC直播線網可調試版本](https://rcshow.tv/index.php?c=newHome&a=ranking&debug=1)
+  
 * [架构源码参考](https://zhangli254804018.github.io/fis3-generator-client/)
 * [核心依賴插件-fis3-parser-client](https://www.npmjs.com/package/fis3-parser-client)
 * [技術支持](http://vc.changyou.com/)
