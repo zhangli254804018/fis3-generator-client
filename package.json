@@ -1,16 +1,17 @@
 {
     "name": "fis3-generator-client",
-    "version": "1.1.3541",
+    "version": "1.1.35422",
     "description": "creat fis3-client",
     "directories": {
         "doc": "doc"
     },
-    "main": "bin/fis3",
+    "main": "./bin/fis3",
+    "bin": {
+        "fisc": "./bin/fisc"
+    },
     "scripts": {
-        "dev": "node bin/fis3",
-        "start": "npm publish .",
-        "test": "mocha --reporter spec --bail --check-leaks test/",
-        "test-ci": "mocha --reporter spec --check-leaks test/"
+        "dev": "node ./bin/fis3",
+        "start": "npm publish ."
     },
     "dependencies": {
         "commander": "2.7.1",
@@ -22,23 +23,15 @@
         "rimraf": "~2.2.8",
         "supertest": "1.0.1"
     },
-    "preferGlobal": true,
-    "bin": {
-        "fisc": "./bin/fisc"
-    },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/zhangli254804018/fis3-generator-client.git"
+        "url": "https://github.com/zhangli254804018/fis3-generator-client.git"
     },
     "keywords": [
         "fis3-client",
         "webapp",
         "pc-client"
     ],
-    "author": "lizhang",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/zhangli254804018/fis3-generator-client/issues"
-    },
-    "homepage": "https://github.com/zhangli254804018/fis3-generator-client#readme"
+    "author": "li.zhang",
+    "license": "ISC"
 }
