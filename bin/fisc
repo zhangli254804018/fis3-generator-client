@@ -114,7 +114,6 @@ function createApplication(app_name, path) {
     var iphp = loadTemplate('index.php');
 
     mkdir(path, function() {
-
         mkdir(path + '/assets');
         mkdir(path + '/assets/images');
         mkdir(path + '/assets/css', function() {
@@ -183,7 +182,7 @@ function createApplication(app_name, path) {
         // package.json
         var pkg = {
             name: app_name,
-            version: '0.1.0',
+            version: '0.2.0',
             private: true,
             "scripts": {
                 "dev": "rm -rf ./dev & fis3 release -d ./build  -cwL",
