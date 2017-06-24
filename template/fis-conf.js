@@ -46,6 +46,9 @@ fis.config.set('settings.optimizer.uglify-js', {
     }
 });
 
+//首先要配置FIS中使用csssprites
+fis.config.set('modules.spriter', 'csssprites');
+
 //壓縮less文件
 fis.match('assets/css/main.less', {
     parser: fis.plugin('less'),
@@ -92,7 +95,7 @@ fis.hook('node_modules', {
 //可选参数, 高级配置
 fis.match('js/main.js', {
     parser: fis.plugin('client'),
-    release: 'js/main$1'
+    // release: 'js/main$1'
 });
 
 fis.match('*.{js,css}', {
@@ -117,12 +120,12 @@ fis.media('dev').match('*', {
 // 針對開發環節下fis配置
 fis.media('prod').match('js/main.js', {
     parser: fis.plugin('client'),
-    release: 'js/main$1'
+    // release: 'js/main$1'
 }).match('assets/css/main.less', {
     parser: fis.plugin('less'),
     rExt: '.css',
     isCssLike: true,
-    release: 'assets/css/main$1'
+    // release: 'assets/css/main$1'
 }).match('*.js', {
     optimizer: fis.plugin('uglify-js'),
 }).match('*.{css,less}', {
