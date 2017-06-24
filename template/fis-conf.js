@@ -21,7 +21,7 @@ fis.set('project.ignore', [
     'dev/**',
     'dist/**',
     'fis-**',
-    'package.json',
+    '*.json',
     'LICENSE',
     '*.md',
     '*.lock',
@@ -51,24 +51,23 @@ fis.match('assets/css/main.less', {
     parser: fis.plugin('less'),
     rExt: '.css',
     isCssLike: true,
-    release: 'assets/css/main.css'
+    // release: 'assets/css/main.css'
 });
 
 fis.match('lib/{*,**/*}.js', {
     isMod: false,
     optimizer: fis.plugin('uglify-js'),
-    packTo: 'js/build/vendor.min.js'
+    packTo: 'js/vendor.min.js'
 });
 
 fis.match('::package', {
     packager: fis.plugin('map', {
-        'js/build/vendor.min.js': [
+        'js/vendor.min.js': [
+            'lib/jquery.tools.min.js',
+            'lib/jquery.custom-scrollbar2.js',
+            'lib/base64.js',
             'lib/underscore.js',
-            // 'lib/jquery.tools.min.js',
-            // 'lib/jquery.custom-scrollbar2.js',
-            // 'lib/base64.js',
-            // 'lib/backbone.js',
-            // 'lib/swfobject.js'
+            'lib/backbone.js',
         ]
     }),
     spriter: fis.plugin('csssprites')
@@ -79,6 +78,10 @@ fis.match('*.png', {
     optimizer: fis.plugin('png-compressor')
 });
 
+fis.match('*.{png,jpg,gif,svg}}', {
+    optimizer: fis.plugin('imagemin', {})
+});
+
 
 // 支持npm模块
 fis.unhook('components');
@@ -87,14 +90,14 @@ fis.hook('node_modules', {
 });
 
 //可选参数, 高级配置
-fis.match('js/index.js', {
+fis.match('js/main.js', {
     parser: fis.plugin('client'),
-    release: 'js/bundle$1'
+    release: 'js/main$1'
 });
 
 fis.match('*.{js,css}', {
-    url: './$0',
-    //release: '$0',
+    url: '.$0',
+    release: '$0',
     //domain: '.'
 });
 
@@ -112,9 +115,9 @@ fis.media('dev').match('*', {
 });
 
 // 針對開發環節下fis配置
-fis.media('prod').match('js/index.js', {
+fis.media('prod').match('js/main.js', {
     parser: fis.plugin('client'),
-    release: 'js/bundle$1'
+    release: 'js/main$1'
 }).match('assets/css/main.less', {
     parser: fis.plugin('less'),
     rExt: '.css',
