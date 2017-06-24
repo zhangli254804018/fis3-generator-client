@@ -144,6 +144,11 @@ function createApplication(app_name, path) {
 
         mkdir(path + '/views', function() {
             switch (program.template) {
+                case 'art':
+                    copy_template('views/art/index.art', path + '/views/index.art');
+                    copy_template('views/art/layout.art', path + '/views/layout.art');
+                    copy_template('views/art/error.art', path + '/views/error.art');
+                    break;
                 case 'ejs':
                     copy_template('views/ejs/index.ejs', path + '/views/index.ejs');
                     copy_template('views/ejs/error.ejs', path + '/views/error.ejs');
@@ -158,11 +163,6 @@ function createApplication(app_name, path) {
                     copy_template('views/jade/index.pug', path + '/views/index.pug');
                     copy_template('views/jade/layout.pug', path + '/views/layout.pug');
                     copy_template('views/jade/error.pug', path + '/views/error.pug');
-                    break;
-                case 'art':
-                    copy_template('views/art/index.art', path + '/views/index.art');
-                    copy_template('views/art/layout.art', path + '/views/layout.art');
-                    copy_template('views/art/error.art', path + '/views/error.art');
                     break;
                 case 'hjs':
                     copy_template('views/hogan/index.hjs', path + '/views/index.hjs');
@@ -181,7 +181,7 @@ function createApplication(app_name, path) {
         // package.json
         var pkg = {
             name: app_name,
-            version: '0.2.0',
+            version: '0.3.0',
             private: true,
             "scripts": {
                 "dev": "rm -rf ./dev & fis3 release -d ./build  -cwL",
