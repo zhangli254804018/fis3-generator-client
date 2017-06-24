@@ -89,7 +89,7 @@ fis.hook('node_modules', {
 //可选参数, 高级配置
 fis.match('js/index.js', {
     parser: fis.plugin('client'),
-    release: 'js/dist/bundle$1'
+    release: 'js/bundle$1'
 });
 
 fis.match('*.{js,css}', {
@@ -114,7 +114,7 @@ fis.media('dev').match('*', {
 // 針對開發環節下fis配置
 fis.media('prod').match('js/index.js', {
     parser: fis.plugin('client'),
-    release: 'js/build/bundle$1'
+    release: 'js/bundle$1'
 }).match('assets/less/main.less', {
     parser: fis.plugin('less'),
     rExt: '.css',

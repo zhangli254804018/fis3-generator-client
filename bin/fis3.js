@@ -109,6 +109,10 @@ function createApplication(app_name, path) {
     var less = loadTemplate('assets/less/main.less');
     var compass = loadTemplate('assets/scss/main.scss');
 
+    //html.php
+    var ihtml = loadTemplate('index.html');
+    var iphp = loadTemplate('index.php');
+
     mkdir(path, function() {
         mkdir(path + '/assets');
         mkdir(path + '/assets/javascripts');
