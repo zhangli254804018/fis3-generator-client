@@ -338,7 +338,7 @@ function main() {
     var appName = path.basename(path.resolve(destinationPath));
 
     // Template engine
-    program.template = 'pug';
+    program.template = 'art';
     if (program.art) program.template = 'art';
     if (program.ejs) program.template = 'ejs';
     if (program.jade) program.template = 'pug';
