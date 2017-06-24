@@ -47,7 +47,7 @@ fis.config.set('settings.optimizer.uglify-js', {
 });
 
 //壓縮less文件
-fis.match('assets/less/main.less', {
+fis.match('assets/css/main.less', {
     parser: fis.plugin('less'),
     rExt: '.css',
     isCssLike: true,
@@ -115,7 +115,7 @@ fis.media('dev').match('*', {
 fis.media('prod').match('js/index.js', {
     parser: fis.plugin('client'),
     release: 'js/bundle$1'
-}).match('assets/less/main.less', {
+}).match('assets/css/main.less', {
     parser: fis.plugin('less'),
     rExt: '.css',
     isCssLike: true,

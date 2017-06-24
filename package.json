@@ -1,6 +1,6 @@
 {
     "name": "fis3-generator-client",
-    "version": "1.1.225",
+    "version": "1.1.2251",
     "description": "creat fis3-client",
     "main": "bin/fis3",
     "scripts": {

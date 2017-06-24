@@ -115,21 +115,21 @@ function createApplication(app_name, path) {
 
     mkdir(path, function() {
 
-        // mkdir(path + '/assets');
+        mkdir(path + '/assets');
         mkdir(path + '/assets/images');
-        mkdir(path + '/assets', function() {
+        mkdir(path + '/assets/css', function() {
             switch (program.css) {
                 case 'less':
-                    write(path + '/assets/less/style.less', less);
+                    write(path + '/assets/css/style.less', less);
                     break;
                 case 'stylus':
-                    write(path + '/assets/styl/style.styl', compass);
+                    write(path + '/assets/css/style.styl', compass);
                     break;
                 case 'compass':
-                    write(path + '/assets/scss/style.scss', compass);
+                    write(path + '/assets/css/style.scss', compass);
                     break;
                 case 'sass':
-                    write(path + '/assets/sass/style.sass', sass);
+                    write(path + '/assets/css/style.sass', sass);
                     break;
                 default:
                     write(path + '/assets/css/style.css', css);
