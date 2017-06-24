@@ -234,12 +234,17 @@ function createApplication(app_name, path) {
         // CSS Engine support
         switch (program.css) {
             case 'less':
-                pkg.dependencies['less-middleware'] = '1.0.x';
+                pkg.dependencies['fis-parser-less'] = '^0.1.3';
                 break;
             case 'compass':
-                pkg.dependencies['node-compass'] = '0.2.3';
+            case 'sass':
+                pkg.dependencies['fis-parser-node-sass'] = '^1.0.1';
+                break;
+            case 'stylus':
+                pkg.dependencies['fis3-parser-stylus '] = '^0.1.3';
                 break;
             default:
+                pkg.dependencies['fis-parser-less'] = '^0.1.3';
         }
 
         // sort dependencies like npm(1)
