@@ -189,8 +189,8 @@ function createApplication(app_name, path) {
             "main": "fis-conf.js",
             "description": "Mr. Zhang, Packaged web front-end architecture for PC terminals and so on. full vesion.",
             "scripts": {
-                "dev": "rm -rf ./dev & fis3 release -d ./dev  -cwL",
-                "build": "rm -rf ./dist & fis3 release prod -d ./dist -l"
+                "dev": "rimraf ./dev & fis3 release -d ./dev  -cwL",
+                "build": "rimraf ./dist & fis3 release prod -d ./dist -l"
             },
             "dependencies": {
                 "fis-parser-less": "^0.1.3",
@@ -202,7 +202,8 @@ function createApplication(app_name, path) {
                 "fis3-postpackager-loader": "^2.1.4"
             },
             "devDependencies": {
-                "fis3": "^3.3.0"
+                "fis3": "^3.3.0",
+                "rimraf": "^2.6.1"
             },
             "repository": {
                 "type": "git",

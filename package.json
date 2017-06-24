@@ -1,6 +1,6 @@
 {
     "name": "fis3-generator-client",
-    "version": "1.1.361",
+    "version": "1.1.362",
     "description": "creat fis3-client",
     "directories": {
         "doc": "doc"
