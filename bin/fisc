@@ -187,7 +187,7 @@ function createApplication(app_name, path) {
             version: '0.3.0',
             private: true,
             "main": "fis-conf.js",
-            "description": "Mr. Zhang, Packaged web front-end architecture for PC terminals and so on. full vesion.",
+            "description": "https://github.com/zhangli254804018/fis3-generator-client, Packaged web front-end architecture for PC terminals and so on. full vesion.",
             "scripts": {
                 "dev": "rimraf ./dev & fis3 release -d ./dev  -cwL",
                 "build": "rimraf ./dist & fis3 release prod -d ./dist -l"
