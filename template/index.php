@@ -16,10 +16,7 @@
       "uid" => $uid,
       "apiLogo" =>$apiLogo,
       "apis" => array(
-          "show" => $rc_showhome,
-          "game" => $rc_game,
-          "team" => $rc_team,
-          "live" =>$rc_live
+
       ),
       "langCode" => "zh-tw",
       "areas" => array(
